@@ -1,0 +1,38 @@
+---
+import DobleArrowRight from '@/components/icons/DobleArrowRight.astro';
+---
+
+<section class="flex grow flex-col min-h-[550px] items-center 2xl:max-w-[1500px] 2xl:mx-auto mx-10 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-3 w-full h-full">
+    <div class="flex flex-col col-span-1">
+      <div class="relative h-[100px]">
+        <DobleArrowRight color1="#fff" color2="#e6d11f" />
+      </div>
+      <div class="mt-7">
+        <div>
+          <h1 class="text-white font-extrabold text-[30px] md:text-[45px]">NOS ENCONTRAMOS A METROS DEL SUPERMERCADO TREBOL</h1>
+        </div>
+      </div>
+    </div>
+    <div class="md:ml-[40px] mt-5 md:mt-0 col-span-2 flex flex-col items-center">
+      <div class="w-full md:w-[70%]">
+        <div class="personal-trainer-image rounded-xl h-[140px] lg:h-[300px]"></div>
+        <div class="mt-12">
+          <h5 class="text-white text-[13px] text-wrap">
+            Nuestras instalaciones de última generación y entrenadores expertos están aquí para
+            ayudarle a alcanzar sus objetivos de fitness, sin importar su punto de partida
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .personal-trainer-image {
+    background-image: url('/images/entrada.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+</style>

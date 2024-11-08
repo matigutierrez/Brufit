@@ -1,0 +1,78 @@
+---
+import { ArrowRight } from '@/components/icons/ArrowRight';
+import DobleArrowRight from '@/components/icons/DobleArrowRight.astro';
+import { Button } from '@nextui-org/react';
+
+---
+
+<section class="flex grow flex-col min-h-[650px] items-center 2xl:max-w-[1500px] 2xl:mx-auto mx-6 md:mx-10 py-10 md:py-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full h-full">
+    <div class="flex flex-col mb-5 md:mb-0">
+      <div class="relative min-h-[100px]">
+        <DobleArrowRight color1="#fff" color2="#e6d11f" />
+      </div>
+      <div class="mt-7">
+        <div>
+          <h1 class="text-white font-extrabold text-[35px] md:text-[45px]">PERSONAL TRAINING</h1>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-col grow h-full justify-end text-white">
+        <div class="flex flex-col h-[200px] w-[200px] bg-[#3d3c3d] rounded-2xl p-4">
+          <div>
+            <h4 class="text-white font-extrabold text-[25px]">OFRECEMOS</h4>
+          </div>
+          <div class="pt-4">
+            <h5 class="text-white text-[13px]">Una acesoria para nuevos miembros.</h5>
+          </div>
+          <div class="flex text-wrap pt-5">
+            <Button client:visible className="bg-white px-3 rounded-2xl">
+              <div class="flex grow">Planes</div>
+              <div class="bg-[#e6d11f] rounded-full p-1">
+                <ArrowRight client:visible color="#000" height="23px" width="23px" />
+              </div>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="personal-trainer-image rounded-xl hidden xl:flex"></div>
+    <div class="mt-10 md:mt-0 md:ml-[40px]">
+      <div class="personal-trainer-image-2 rounded-xl"></div>
+      <div class="mt-12">
+        <h5 class="text-white text-[13px] text-wrap">
+          Nuestras instalaciones de última generación y entrenadores expertos están aquí para
+          ayudarle a alcanzar sus objetivos de fitness, sin importar su punto de partida
+        </h5>
+      </div>
+      <div class="flex text-wrap pt-10">
+        <Button className="bg-[#e6d11f] px-3 rounded-md">
+          <div class="flex grow">Nuestros planes</div>
+          <div class="bg-white rounded-md p-1">
+            <ArrowRight client:visible color="#000" height="23px" width="23px" />
+          </div>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .personal-trainer-image {
+    width: -webkit-fill-available;
+    height: 100%;
+    background-image: url('/images/trainer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .personal-trainer-image-2 {
+    width: -webkit-fill-available;
+    height: 300px;
+    background-image: url('/images/trainer2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+</style>

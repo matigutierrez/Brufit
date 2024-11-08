@@ -1,0 +1,28 @@
+---
+import DobleArrowRight from '@/components/icons/DobleArrowRight.astro';
+import MemberShipFullCard from '@/components/memberships/MemberShipFullCard.astro';
+import MemberShipMidCard from '@/components/memberships/MemberShipMidCard.astro';
+
+---
+
+<section class="m-[10px] rounded-2xl bg-[#3d3c3d]">
+  <div class="flex grow flex-col min-h-[650px] items-center 2xl:max-w-[1500px] 2xl:mx-auto mx-6 md:mx-10 py-10 md:py-20">
+    <div class="flex flex-wrap md:flex-nowrap grow w-full mb-10 md:mb-0">
+      <div class="flex grow w-full relative min-h-[100px]">
+        <DobleArrowRight color1="#fff" color2="#707070" />
+      </div>
+      <div class="flex grow w-full">
+        <h1 class="text-white font-extrabold text-[25px] md:text-[45px] md:text-right">PLANES DE MEMBRESIA QUE SE ADAPTAN A TI.</h1>
+      </div>
+    </div>
+    <div class="flex flex-wrap md:flex-nowrap grow w-full gap-6 items-end">
+      <MemberShipFullCard />
+      <div class="flex grow w-full gap-6 overflow-y-auto items-end">
+        <MemberShipMidCard />
+        <MemberShipMidCard />
+        <MemberShipMidCard />
+        <MemberShipMidCard />
+      </div>
+    </div>
+  </div>
+</section>

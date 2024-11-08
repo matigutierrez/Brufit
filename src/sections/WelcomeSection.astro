@@ -1,0 +1,48 @@
+---
+import { Button } from '@nextui-org/react';
+import { ArrowRight } from '@/components/icons/ArrowRight';
+
+---
+
+<section class="h-[586px]">
+  <div class="main-image rounded-xl md:mt-[10px] md:mx-[10px]">
+    <div class="bg-gradient-to-l from-transparent to-gray-900 w-full h-full rounded-xl">
+      <div class="flex h-full items-center 2xl:max-w-[1500px] 2xl:mx-auto mx-6 md:mx-10">
+        <div class="flex flex-col">
+          <div>
+            <h1 class="text-white font-extrabold text-[35px] md:text-[50px]">TU VIAJE FITNESS</h1>
+            <h1 class="text-white font-extrabold text-[35px] md:text-[50px]">COMIENZA AQUI</h1>
+          </div>
+          <div class="flex text-wrap pt-10">
+            <h5 class="text-white text-[13px]">Nuestras instalaciones de ultima generacion y entrenadores expertos <br> estan aqui para ayudarte a alcanzar tus objetivos.</h5>
+          </div>
+          <div class="flex text-wrap pt-10">
+            <Button
+              client:visible
+              className="bg-[#e6d11f] px-3 rounded-md"
+            >
+              <div class="flex grow">
+                Nuestros planes
+              </div>
+              <div class="bg-white rounded-md p-1">
+                <ArrowRight client:visible color="#000" height="23px" width="23px" />
+              </div>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .main-image {
+    width: -webkit-fill-available;
+    height: 650px;
+    background-image: url('/images/main-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+  }
+</style>

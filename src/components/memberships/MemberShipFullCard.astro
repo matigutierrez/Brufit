@@ -1,0 +1,58 @@
+---
+import { Button } from '@nextui-org/react';
+import { ArrowRight } from '@/components/icons/ArrowRight';
+import CheckCircle from '@/components/icons/CheckCircle.astro';
+
+---
+
+<div class="flex flex-col h-[330px] w-full md:w-auto md:min-w-[330px] bg-white rounded-2xl p-4">
+  <div class="flex w-full">
+    <div class="flex grow">
+      <h4 class="text-gray-800 font-extrabold text-[25px]">Premium</h4>
+    </div>
+    <div class="flex flex-col">
+      <h5 class="text-gray-800 font-extrabold text-[30px]">$75.000</h5>
+      <h5 class="text-gray-500 text-end font-extrabold text-[15px]">/mes</h5>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2 pt-4">
+    <div class="flex items-center">
+      <CheckCircle color="#000" height="23px" width="23px" />
+      <div>
+        <h5 class="text-gray-800 text-[13px] ml-2">Entrenadores profesionales.</h5>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <CheckCircle color="#000" height="23px" width="23px" />
+      <div>
+        <h5 class="text-gray-800 text-[13px] ml-2">Entrenamiento especializado.</h5>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <CheckCircle color="#000" height="23px" width="23px" />
+      <div>
+        <h5 class="text-gray-800 text-[13px] ml-2">Seguimiento del entreno.</h5>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <CheckCircle color="#000" height="23px" width="23px" />
+      <div>
+        <h5 class="text-gray-800 text-[13px] ml-2">Programa de dieta.</h5>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <CheckCircle color="#000" height="23px" width="23px" />
+      <div>
+        <h5 class="text-gray-800 text-[13px] ml-2">Programa de dieta.</h5>
+      </div>
+    </div>
+  </div>
+  <div class="flex pt-4 h-full items-end justify-end">
+    <Button client:visible className="bg-[#e6d11f] px-3 rounded-2xl">
+      <div class="flex grow">Contactar</div>
+      <div class="bg-white rounded-full p-1">
+        <ArrowRight client:visible color="#000" height="23px" width="23px" />
+      </div>
+    </Button>
+  </div>
+</div>
