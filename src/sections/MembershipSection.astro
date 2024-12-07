@@ -3,6 +3,50 @@ import DobleArrowRight from '@/components/icons/DobleArrowRight.astro';
 import MemberShipFullCard from '@/components/memberships/MemberShipFullCard.astro';
 import MemberShipMidCard from '@/components/memberships/MemberShipMidCard.astro';
 
+interface MembershipData {
+  price: string;
+  title: string;
+  description: string;
+}
+
+const membershipData: MembershipData[]  = [
+  {
+    price: '$60.000',
+    title: 'Personalizado',
+    description: 'Entrenamiento 3 veces por semana, entrenamiento personalizado, seguimientos del extreno y profesores profesionales.',
+  },
+  {
+    price: '$30.000',
+    title: 'Acceso al GYM',
+    description: 'Plan de acceso de 6 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  },
+  {
+    price: '$27.000',
+    title: 'Acceso al GYM',
+    description: 'Plan de acceso de 4 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  },
+  {
+    price: '$25.000',
+    title: 'Acceso al GYM',
+    description: 'Plan de acceso de 3 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  },
+  {
+    price: '$75.000',
+    title: 'Trimestral',
+    description: 'Plan de acceso de 6 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  },
+  {
+    price: '$140.000',
+    title: 'Sementral',
+    description: 'Plan de acceso de 6 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  },
+  {
+    price: '$235.000',
+    title: 'Anual',
+    description: 'Plan de acceso de 6 veces por semana con uso libre de maquinas y rutinas de entrenamiento.',
+  }
+];
+
 ---
 
 <section class="m-[10px] rounded-2xl bg-[#3d3c3d]">
@@ -18,10 +62,11 @@ import MemberShipMidCard from '@/components/memberships/MemberShipMidCard.astro'
     <div class="flex flex-wrap md:flex-nowrap grow w-full gap-6 items-end">
       <MemberShipFullCard />
       <div class="flex grow w-full gap-6 overflow-y-auto items-end">
-        <MemberShipMidCard />
-        <MemberShipMidCard />
-        <MemberShipMidCard />
-        <MemberShipMidCard />
+        {
+          membershipData.map((data, index) => (
+            <MemberShipMidCard price={data.price} title={data.title} description={data.description} />
+          ))
+        }
       </div>
     </div>
   </div>

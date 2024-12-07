@@ -54,9 +54,6 @@ export default function Appbar() {
       </NavbarContent>
       <NavbarContent className="hidden 2xl:flex" justify="end">
         <NavbarItem>
-          <Button as={Link} className="text-white" href="#" variant="flat">
-            Menu
-          </Button>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

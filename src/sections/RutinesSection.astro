@@ -2,6 +2,30 @@
 import DobleArrowRight from '@/components/icons/DobleArrowRight.astro';
 import InfoRutinesCard from '@/components/rutines/InfoRutinesCard.astro';
 
+interface RutinesData {
+  title: string;
+  description: string;
+}
+
+const rutinesData: RutinesData[]  = [
+  {
+    title: 'Pecho',
+    description: 'Rutinas con Press banca, apertura de pecho, banco inclinado, con uso de barra o mancuernas.',
+  },
+  {
+    title: 'Espalda',
+    description: 'Rutinas con dominadas, remo con barra, remo con mancuerna, peso muerto, jalones.',
+  },
+  {
+    title: 'Pierna',
+    description: 'Rutinas con sentadillas, prensa, extensiones de pierna, curl de pierna, peso muerto.',
+  },
+  {
+    title: 'Brazo',
+    description: 'Rutinas con curl de biceps, curl de biceps con barra, curl de biceps con mancuernas, etc.',
+  }
+];
+
 ---
 
 <section class="m-[10px] rounded-2xl bg-[#e6d11f]">
@@ -25,17 +49,16 @@ import InfoRutinesCard from '@/components/rutines/InfoRutinesCard.astro';
       </div>
       <div class="col-span-2">
         <div class="flex grow gap-6 overflow-y-auto items-end md:ml-[40px]">
-          <div class="personal-trainer-image min-w-[260px] md:min-w-[550px] h-[200px] md:h-[350px] rounded-xl"></div>
-          <div class="personal-trainer-image min-w-[260px] md:min-w-[550px] h-[200px] md:h-[350px] rounded-xl"></div>
-          <div class="personal-trainer-image min-w-[260px] md:min-w-[550px] h-[200px] md:h-[350px] rounded-xl"></div>
+          <div class="personal-trainer-image w-full h-[200px] md:h-[350px] rounded-xl md:ml-20"></div>
         </div>
       </div>
     </div>
     <div class="flex grow mt-10 overflow-y-auto w-full gap-6">
-      <InfoRutinesCard />
-      <InfoRutinesCard />
-      <InfoRutinesCard />
-      <InfoRutinesCard />
+      {
+        rutinesData.map((data, index) => (
+          <InfoRutinesCard title={data.title} description={data.description} />
+        ))
+      }
     </div>
   </div>
 </section>
